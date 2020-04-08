@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GOALS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="task_master" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Uy6-fB-sdG"/>
+                    <navigationItem key="navigationItem" title="GOALS" id="Uy6-fB-sdG">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Rwh-B8-hUs"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Yzr-Qb-8Yj"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="Ech-Kj-lfg" kind="show" id="Wme-4q-6c7"/>
                     </connections>
