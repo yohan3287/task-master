@@ -13,6 +13,7 @@
 		AE91EBD7243DBC9B0003C3D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE91EBD5243DBC9B0003C3D0 /* Main.storyboard */; };
 		AE91EBD9243DBC9C0003C3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE91EBD8243DBC9C0003C3D0 /* Assets.xcassets */; };
 		AE91EBDC243DBC9C0003C3D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE91EBDA243DBC9C0003C3D0 /* LaunchScreen.storyboard */; };
+		F57ECD79243E1F81005FF1B8 /* GoalsCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ECD78243E1F81005FF1B8 /* GoalsCellCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AE91EBD8243DBC9C0003C3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE91EBDB243DBC9C0003C3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE91EBDD243DBC9C0003C3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F57ECD78243E1F81005FF1B8 /* GoalsCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCellCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		AE91EBCE243DBC9B0003C3D0 /* task-master */ = {
 			isa = PBXGroup;
 			children = (
+				F57ECD78243E1F81005FF1B8 /* GoalsCellCollectionViewCell.swift */,
 				AE91EBCF243DBC9B0003C3D0 /* AppDelegate.swift */,
 				AE91EBD1243DBC9B0003C3D0 /* SceneDelegate.swift */,
 				AE91EBD3243DBC9B0003C3D0 /* ViewController.swift */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE91EBD4243DBC9B0003C3D0 /* ViewController.swift in Sources */,
+				F57ECD79243E1F81005FF1B8 /* GoalsCellCollectionViewCell.swift in Sources */,
 				AE91EBD0243DBC9B0003C3D0 /* AppDelegate.swift in Sources */,
 				AE91EBD2243DBC9B0003C3D0 /* SceneDelegate.swift in Sources */,
 			);
