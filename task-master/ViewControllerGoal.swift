@@ -19,14 +19,14 @@ let dummyGoals = [
     goal(namaGoals: "Turun 10 Kg",
          missions: ["Makan kurang dari 2000 kalori","Minum Air putih setiap hari","lari pagi setiap hari"]),
     goal(namaGoals: "Belajar Swift",
-         missions: [" Learn if-else"," Learn Loop"," Learn OOP"]),
+         missions: ["Learn if-else","Learn Loop","Learn OOP"]),
     goal(namaGoals: "Punya Pacar",
          missions: ["buka tinder","jadi ganteng / cantik","jadi tajir"])
 ]
 // dummy motivation message
 let dummyMotivation = ["xcbxcxvxcvxcbxvxc","rtyrtyrtytryrty","fghfghhgfhfghgff","qweqwewqeqew","asdasdsadsadsa"]
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewControllerGoal: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var goalsCV: UICollectionView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
