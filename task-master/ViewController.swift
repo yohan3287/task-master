@@ -30,17 +30,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var goalsCV: UICollectionView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        print(dummyGoals.count)
+//        ditambah 1 untuk motivation message
         return dummyGoals.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = goalsCV.dequeueReusableCell(withReuseIdentifier: "goalsCell", for: indexPath) as! GoalsCellCollectionViewCell
+//        render golas
         if indexPath.row != 0{
             cell.backgroundColor = .blue
             cell.labelGoals.text = dummyGoals[indexPath.row-1].namaGoals + "\nProgress Bar"
             return cell
         }else {
+//            initiate motivation message
             cell.backgroundColor = .red
             cell.labelGoals.text = "MOTIVATION MESSAGE : \n" + dummyMotivation[indexPath.row]
             return cell
