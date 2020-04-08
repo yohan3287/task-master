@@ -17,8 +17,3 @@ class ViewController: UIViewController {
 
 
 }
-
-//ashahjsjsabjk
-//asdasfasdfdsfgdasgdsagfsdafas
-//yohan
-//askajsfbnkasdadkasfla
