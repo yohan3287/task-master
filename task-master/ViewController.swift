@@ -36,7 +36,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = goalsCV.dequeueReusableCell(withReuseIdentifier: "goalsCell", for: indexPath) as! GoalsCellCollectionViewCell
-//        render golas
+//        render goals
         if indexPath.row != 0{
             cell.backgroundColor = .blue
             cell.labelGoals.text = dummyGoals[indexPath.row-1].namaGoals + "\nProgress Bar"
