@@ -8,13 +8,8 @@
 
 import UIKit
 
-struct userData {
-    var userName : String
-    var userGender : String
-    var userDOB : String
-    
-}
-var currentUser = userData(userName: "User000", userGender: "Male", userDOB: "01/01/2000")
+
+
 class ViewControllerEditProfile: UIViewController {
 
     @IBOutlet weak var NameField: UITextField!
@@ -29,6 +24,15 @@ class ViewControllerEditProfile: UIViewController {
         AgeField.delegate = self
         // Do any additional setup after loading the view.
     }
+    @IBAction func backToProfile(_ sender: Any) {
+           //currentUser.userName = NameField.text!
+           currentUser.userGender = GenderField.text!
+           currentUser.userDOB = AgeField.text!
+           print(currentUser.userName)
+        performSegue(withIdentifier: "unwindToProfile", sender: self)
+        
+       }
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         NameField.resignFirstResponder()
@@ -37,11 +41,6 @@ class ViewControllerEditProfile: UIViewController {
         
     }
     
-    @IBAction func userUpdate(_ sender: Any) {
-        currentUser.userName = NameField.text!
-        currentUser.userGender = GenderField.text!
-        currentUser.userDOB = AgeField.text!
-    }
 }
     
     extension ViewControllerEditProfile : UITextFieldDelegate {
@@ -50,7 +49,6 @@ class ViewControllerEditProfile: UIViewController {
             return true
         }
         }
-    
 
 
     /*
