@@ -49,8 +49,6 @@ class ViewControllerArchives: UIViewController, UICollectionViewDelegate, UIColl
                 return cell
             }
         }
-        
-        
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
