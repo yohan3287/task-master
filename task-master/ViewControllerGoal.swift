@@ -55,5 +55,10 @@ class ViewControllerGoal: UIViewController, UICollectionViewDelegate, UICollecti
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func addGoalDidTab(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "toGoalDetail", sender: self)
+    }
+    
+    @IBAction func unwindToGoals(unwindSegue: UIStoryboardSegue){}
+    
 }

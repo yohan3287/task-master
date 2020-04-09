@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE84B24A243F1C5200E026E8 /* GoalDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE84B249243F1C5200E026E8 /* GoalDetailVC.swift */; };
 		AE91EBD0243DBC9B0003C3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91EBCF243DBC9B0003C3D0 /* AppDelegate.swift */; };
 		AE91EBD2243DBC9B0003C3D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91EBD1243DBC9B0003C3D0 /* SceneDelegate.swift */; };
 		AE91EBD4243DBC9B0003C3D0 /* ViewControllerGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91EBD3243DBC9B0003C3D0 /* ViewControllerGoal.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE84B249243F1C5200E026E8 /* GoalDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailVC.swift; sourceTree = "<group>"; };
 		AE91EBCC243DBC9B0003C3D0 /* task-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "task-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE91EBCF243DBC9B0003C3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE91EBD1243DBC9B0003C3D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				AE91EBD3243DBC9B0003C3D0 /* ViewControllerGoal.swift */,
 				F5E6E5F3243E4ACC00D8A6B6 /* ViewControllerToDo.swift */,
 				AE91EBD5243DBC9B0003C3D0 /* Main.storyboard */,
+				AE84B249243F1C5200E026E8 /* GoalDetailVC.swift */,
 				EAD16DFB243F065800B7470D /* ViewControllerProfile.swift */,
 				EAD16DF9243EF9C600B7470D /* ViewControllerEdit.swift */,
 				AE91EBD8243DBC9C0003C3D0 /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 				AE91EBD4243DBC9B0003C3D0 /* ViewControllerGoal.swift in Sources */,
 				F57ECD79243E1F81005FF1B8 /* GoalsCellCollectionViewCell.swift in Sources */,
 				F5E6E5F4243E4ACC00D8A6B6 /* ViewControllerToDo.swift in Sources */,
+				AE84B24A243F1C5200E026E8 /* GoalDetailVC.swift in Sources */,
 				AE91EBD0243DBC9B0003C3D0 /* AppDelegate.swift in Sources */,
 				EAD16DFC243F065800B7470D /* ViewControllerProfile.swift in Sources */,
 				AE91EBD2243DBC9B0003C3D0 /* SceneDelegate.swift in Sources */,
