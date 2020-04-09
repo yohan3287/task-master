@@ -19,7 +19,7 @@ let dummyGoals = [
     goal(namaGoals: "Turun 10 Kg",
          missions: ["Makan kurang dari 2000 kalori","Minum Air putih setiap hari","lari pagi setiap hari"]),
     goal(namaGoals: "Belajar Swift",
-         missions: ["Learn if-else","Learn Loop","Learn OOP"]),
+         missions: ["Learn if-else","Learn Loop","qLearn OOP"]),
     goal(namaGoals: "Punya Pacar",
          missions: ["buka tinder","jadi ganteng / cantik","jadi tajir"])
 ]
