@@ -10,6 +10,18 @@ import UIKit
 
 private let reuseIdentifier = "CollaboratorCell"
 
+struct Collaborator {
+     var collaboratorName: String
+     var collaboratorProgress: Float
+ }
+ 
+ let dummyCollaborator = [
+    Collaborator(collaboratorName: "Rizqi", collaboratorProgress: 20),
+    Collaborator(collaboratorName: "Marvin", collaboratorProgress: 20),
+    Collaborator(collaboratorName: "Titan", collaboratorProgress: 20)
+     
+ ]
+var collaborators = [Collaborator]()
 class CollaboratorVC: UICollectionViewController {
 
     override func viewDidLoad() {
@@ -44,16 +56,19 @@ class CollaboratorVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1 //nanti ganti
+        return dummyCollaborator.count //nanti ganti
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
      if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CollaboratorCell{
    //            let collaborator = collaboratora[indexPath.row]
-               cell.collaboratorName.text = "Rizqi"
-               cell.collaboratorProgress.setProgress(20, animated: true)
-               cell.collaboratorProgress.transform = cell.collaboratorProgress.transform.scaledBy(x: 1, y: 5)
-               
+
+              cell.collaboratorName.text = dummyCollaborator[indexPath.row].collaboratorName
+              cell.collaboratorProgress.setProgress(20, animated: true)
+              cell.collaboratorProgress.transform = cell.collaboratorProgress.transform.scaledBy(x: 1, y: 5)
+                    
+                print(indexPath.row)
+            
                return cell
         }
         // Configure the cell
