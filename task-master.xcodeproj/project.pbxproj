@@ -12,6 +12,7 @@
 		2DFB809D243F2AFA007B79DF /* ArchivesCellCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB809C243F2AFA007B79DF /* ArchivesCellCV.swift */; };
 		9F131173244005F200D02E97 /* CollaboratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F131172244005F200D02E97 /* CollaboratorVC.swift */; };
 		9F131175244006A200D02E97 /* CollaboratorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F131174244006A200D02E97 /* CollaboratorCell.swift */; };
+		AE10188C2440F97700DA8319 /* UITextField+InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE10188B2440F97700DA8319 /* UITextField+InputView.swift */; };
 		AE84B24A243F1C5200E026E8 /* GoalDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE84B249243F1C5200E026E8 /* GoalDetailVC.swift */; };
 		AE91EBD0243DBC9B0003C3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91EBCF243DBC9B0003C3D0 /* AppDelegate.swift */; };
 		AE91EBD2243DBC9B0003C3D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91EBD1243DBC9B0003C3D0 /* SceneDelegate.swift */; };
@@ -31,6 +32,7 @@
 		2DFB809C243F2AFA007B79DF /* ArchivesCellCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivesCellCV.swift; sourceTree = "<group>"; };
 		9F131172244005F200D02E97 /* CollaboratorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorVC.swift; sourceTree = "<group>"; };
 		9F131174244006A200D02E97 /* CollaboratorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorCell.swift; sourceTree = "<group>"; };
+		AE10188B2440F97700DA8319 /* UITextField+InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+InputView.swift"; sourceTree = "<group>"; };
 		AE84B249243F1C5200E026E8 /* GoalDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailVC.swift; sourceTree = "<group>"; };
 		AE91EBCC243DBC9B0003C3D0 /* task-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "task-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE91EBCF243DBC9B0003C3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				AE91EBDD243DBC9C0003C3D0 /* Info.plist */,
 				9F131172244005F200D02E97 /* CollaboratorVC.swift */,
 				9F131174244006A200D02E97 /* CollaboratorCell.swift */,
+				AE10188B2440F97700DA8319 /* UITextField+InputView.swift */,
 			);
 			path = "task-master";
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				AE84B24A243F1C5200E026E8 /* GoalDetailVC.swift in Sources */,
 				9F131173244005F200D02E97 /* CollaboratorVC.swift in Sources */,
 				AE91EBD0243DBC9B0003C3D0 /* AppDelegate.swift in Sources */,
+				AE10188C2440F97700DA8319 /* UITextField+InputView.swift in Sources */,
 				EAD16DFC243F065800B7470D /* ViewControllerProfile.swift in Sources */,
 				AE91EBD2243DBC9B0003C3D0 /* SceneDelegate.swift in Sources */,
 			);
