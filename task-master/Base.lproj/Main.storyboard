@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -185,6 +186,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.2.fill" catalog="system" id="0Il-X7-vBg">
                             <connections>
                                 <action selector="colaboratorButtonDidTab:" destination="Ech-Kj-lfg" id="oYY-e3-n9B"/>
+                                <segue destination="z9P-8v-Zbl" kind="show" id="DND-Ta-c1d"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -200,6 +202,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTe-dg-25X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2742.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--CollaboratorVC-->
+        <scene sceneID="aco-jp-HWZ">
+            <objects>
+                <collectionViewController id="z9P-8v-Zbl" customClass="CollaboratorVC" customModule="task_master" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="981-nb-BpH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zg3-Lq-dmg">
+                            <size key="itemSize" width="414" height="105"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollaboratorCell" id="xQk-SK-IzS" customClass="CollaboratorCell" customModule="task_master" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HNz-j9-kox">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile Blue" translatesAutoresizingMaskIntoConstraints="NO" id="fr9-2F-KnX">
+                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="guW-1P-rmf">
+                                            <rect key="frame" x="112" y="72" width="274" height="2"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </progressView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Collaborator's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jC-o6-6Y2">
+                                            <rect key="frame" x="112" y="8" width="157" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="414" height="105"/>
+                                <connections>
+                                    <outlet property="collaboratorImage" destination="fr9-2F-KnX" id="X1F-Fy-k9j"/>
+                                    <outlet property="collaboratorName" destination="4jC-o6-6Y2" id="JzU-Ke-PGY"/>
+                                    <outlet property="collaboratorProgress" destination="guW-1P-rmf" id="JGJ-96-QJP"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="z9P-8v-Zbl" id="W3G-xD-ukb"/>
+                            <outlet property="delegate" destination="z9P-8v-Zbl" id="HmW-MR-JRs"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="WqE-VJ-wrE"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMj-lr-8GG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3640.579710144928" y="143.97321428571428"/>
         </scene>
         <!--View Controller Edit Profile-->
         <scene sceneID="jJU-V2-uVZ">
@@ -496,6 +556,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Profile Blue" width="209" height="224"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
