@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D38B5752441B6F400D9F248 /* AddGoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38B5742441B6F400D9F248 /* AddGoalsVC.swift */; };
 		2DFB8099243F255C007B79DF /* DecorateCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB8098243F255C007B79DF /* DecorateCV.swift */; };
 		2DFB809B243F264D007B79DF /* ViewControllerArchives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB809A243F264D007B79DF /* ViewControllerArchives.swift */; };
 		2DFB809D243F2AFA007B79DF /* ArchivesCellCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB809C243F2AFA007B79DF /* ArchivesCellCV.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D38B5742441B6F400D9F248 /* AddGoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalsVC.swift; sourceTree = "<group>"; };
 		2DFB8098243F255C007B79DF /* DecorateCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorateCV.swift; sourceTree = "<group>"; };
 		2DFB809A243F264D007B79DF /* ViewControllerArchives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerArchives.swift; sourceTree = "<group>"; };
 		2DFB809C243F2AFA007B79DF /* ArchivesCellCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivesCellCV.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				AE91EBD5243DBC9B0003C3D0 /* Main.storyboard */,
 				2DFB8098243F255C007B79DF /* DecorateCV.swift */,
 				AE84B249243F1C5200E026E8 /* GoalDetailVC.swift */,
+				2D38B5742441B6F400D9F248 /* AddGoalsVC.swift */,
 				EAD16DFB243F065800B7470D /* ProfileVC.swift */,
 				EAD16DF9243EF9C600B7470D /* EditProfileVC.swift */,
 				AE91EBD8243DBC9C0003C3D0 /* Assets.xcassets */,
@@ -178,6 +181,7 @@
 				2DFB8099243F255C007B79DF /* DecorateCV.swift in Sources */,
 				2DFB809B243F264D007B79DF /* ViewControllerArchives.swift in Sources */,
 				F57ECD79243E1F81005FF1B8 /* GoalsCellCollectionViewCell.swift in Sources */,
+				2D38B5752441B6F400D9F248 /* AddGoalsVC.swift in Sources */,
 				F5E6E5F4243E4ACC00D8A6B6 /* ViewControllerToDo.swift in Sources */,
 				AE84B24A243F1C5200E026E8 /* GoalDetailVC.swift in Sources */,
 				9F131173244005F200D02E97 /* CollaboratorVC.swift in Sources */,
