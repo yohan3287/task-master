@@ -14,7 +14,7 @@ struct userData {
     
 }
 var currentUser = userData(userName: "User000", userGender: "Male", userDOB: "01/01/2000")
-class ViewControllerProfile: UIViewController {
+class ProfileVC: UIViewController {
 
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var editButton: UIButton!
@@ -34,6 +34,8 @@ class ViewControllerProfile: UIViewController {
     }
     @IBAction func unwindToProfile(unwindSegue: UIStoryboardSegue){}
    
+    
+    
     /*
     // MARK: - Navigation
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CCF-cN-Prs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKi-Hi-KfJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -261,10 +261,10 @@
             </objects>
             <point key="canvasLocation" x="3640.579710144928" y="143.97321428571428"/>
         </scene>
-        <!--View Controller Edit Profile-->
+        <!--Edit ProfileVC-->
         <scene sceneID="jJU-V2-uVZ">
             <objects>
-                <viewController id="uaA-3I-CSC" customClass="ViewControllerEditProfile" customModule="task_master" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uaA-3I-CSC" customClass="EditProfileVC" customModule="task_master" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FZc-x2-nda">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,7 +287,7 @@
                                     <navigationItem title="Edit Profile" id="J2b-zE-G8v">
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="ImS-4S-DgB">
                                             <connections>
-                                                <action selector="backToProfile:" destination="uaA-3I-CSC" id="BHP-Kw-mpb"/>
+                                                <segue destination="pTG-Es-UTH" kind="unwind" unwindAction="unwindToProfileWithUnwindSegue:" id="vCn-1z-exC"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -330,12 +330,13 @@
                         <viewLayoutGuide key="safeArea" id="2p1-rB-TFC"/>
                     </view>
                     <connections>
-                        <outlet property="AgeField" destination="tlP-zV-7GZ" id="cwc-du-lEU"/>
                         <outlet property="GenderField" destination="jzl-EY-yy9" id="V3o-T5-0J4"/>
                         <outlet property="NameField" destination="aMm-Ej-g4V" id="cD2-O8-cfZ"/>
+                        <outlet property="ageField" destination="tlP-zV-7GZ" id="cwc-du-lEU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cy7-AM-ReE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="pTG-Es-UTH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1874" y="877"/>
         </scene>
@@ -398,7 +399,7 @@
         <!--Profile-->
         <scene sceneID="4df-7g-X46">
             <objects>
-                <viewController id="FKi-Hi-KfJ" customClass="ViewControllerProfile" customModule="task_master" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FKi-Hi-KfJ" customClass="ProfileVC" customModule="task_master" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="erb-0p-Yin">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
