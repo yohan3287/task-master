@@ -15,15 +15,24 @@ struct userData {
 }
 var currentUser = userData(userName: "User000", userGender: "Male", userDOB: "01/01/2000")
 class ProfileVC: UIViewController {
+    var bgImage: UIImageView?
+
 
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var profileImage: UIImageView!
+
+//    profileImage.imageView.image =[profileImage setImage:[UIImage imageNamed: @"Profile Blue.png"]]
     @IBOutlet weak var archiveButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.editButton.layer.cornerRadius = 20
         self.archiveButton.layer.cornerRadius = 20
+        var image: UIImage = UIImage(named: "Profile Blue")!
         
+              bgImage = UIImageView(image: image)
+//              bgImage!.frame = CGRect(0,0,100,200)
+              self.view.addSubview(bgImage!)
         userName.text = currentUser.userName
         print(currentUser.userName)
         // Do any additional setup after loading the view.
