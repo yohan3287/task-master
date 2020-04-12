@@ -47,7 +47,7 @@ var dummyGoals = [
        collaborator(collaboratorName: "Titan", collaboratorProgress: 100)])
 ]
 // dummy motivation message
-let dummyMotivation = ["xcbxcxvxcvxcbxvxc","rtyrtyrtytryrty","fghfghhgfhfghgff","qweqwewqeqew","asdasdsadsadsa"]
+let dummyMotivation = ["Do or do not, there is no try!","Hate leads to anger, anger leads to suffering","fghfghhgfhfghgff","qweqwewqeqew","asdasdsadsadsa"]
 
 class ViewControllerGoal: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var goalsCV: UICollectionView!
