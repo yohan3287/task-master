@@ -9,10 +9,6 @@
 import UIKit
 
 class CollaboratorViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
-    
-    
-   
-    
 
     @IBOutlet weak var addCollaborators: UITextField!
     @IBOutlet weak var collaboratorsCV: UICollectionView!
@@ -38,11 +34,11 @@ class CollaboratorViewController: UIViewController,UICollectionViewDataSource,UI
                       cell.collaboratorProgressNumber.text = "\(hostProgress[indexPath.row])%"
                          return cell
         } else {
-          cell.collaboratorName.text = collaboratorName[indexPath.row-1]
-                     cell.collaboratorProgress.setProgress(collaboratorProgress[indexPath.row-1], animated: false)
-                     cell.collaboratorProgress.progress = collaboratorProgress[indexPath.row-1]/progressMax
-                     cell.collaboratorProgress.transform.scaledBy(x: 0, y: 5)
-                     cell.collaboratorProgressNumber.text = "\(collaboratorProgress[indexPath.row-1])%"
+            cell.collaboratorName.text = goalTemp.colaboratorsList[indexPath.row-1].collaboratorName // sudah diubah
+            cell.collaboratorProgress.setProgress(collaboratorProgress[indexPath.row-1], animated: false)
+            cell.collaboratorProgress.progress = collaboratorProgress[indexPath.row-1]/progressMax
+            cell.collaboratorProgress.transform.scaledBy(x: 0, y: 5)
+            cell.collaboratorProgressNumber.text = "\(collaboratorProgress[indexPath.row-1])%"
             return cell
             
             
@@ -76,6 +72,17 @@ class CollaboratorViewController: UIViewController,UICollectionViewDataSource,UI
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func countCheckedMission () -> Int {
+        var index = 0
+        var totalChecked = 0
+        while(index < goalTemp.missionsList.count){
+            totalChecked = totalChecked + 1
+            index = index + 1
+        }
+        
+        return totalChecked
     }
     
 }

@@ -146,7 +146,12 @@ class GoalDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             goalTemp.goalName = c
         }
         
-        dummyGoals.append(goalTemp)
+        if goalDetailVCIsForDetailIndex >= 0 {
+            dummyGoals[goalDetailVCIsForDetailIndex] = goalTemp
+        }
+        else{
+            dummyGoals.append(goalTemp)
+        }
     }
     
     /*
