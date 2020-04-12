@@ -26,7 +26,7 @@ struct goalTmp {// konflik nama goal
 }
 
 // define dummy goals to render
-let dummyGoals = [
+var dummyGoals = [
     goalTmp(goalName: "berat badan turun 10Kg", // dummy data
     goalTimeStart: "1 Jan 2020",
     goalTimeEnd: "1 Dec 2020",
@@ -79,6 +79,7 @@ class ViewControllerGoal: UIViewController, UICollectionViewDelegate, UICollecti
     }
 
     @IBAction func addGoalDidTab(_ sender: UIBarButtonItem) {
+        goalDetailVCIsForDetailIndex = -1
         performSegue(withIdentifier: "toGoalDetail", sender: self)
     }
     
