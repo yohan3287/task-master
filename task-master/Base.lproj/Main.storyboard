@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Puq-06-OAK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CCF-cN-Prs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -186,8 +186,8 @@
                     <navigationItem key="navigationItem" title="Goal Detail" id="NrH-D5-Sqi">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.2.fill" catalog="system" id="0Il-X7-vBg">
                             <connections>
-                                <action selector="colaboratorButtonDidTab:" destination="Ech-Kj-lfg" id="oYY-e3-n9B"/>
-                                <segue destination="Puq-06-OAK" kind="show" id="wvj-Kb-Xij"/>
+                                <action selector="collaboratorButtonDidTab:" destination="Ech-Kj-lfg" id="6t1-Kz-PcK"/>
+                                <segue destination="Puq-06-OAK" kind="show" identifier="toCollab" id="cyV-Zy-xUB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -204,7 +204,7 @@
             </objects>
             <point key="canvasLocation" x="2742.0289855072465" y="137.94642857142856"/>
         </scene>
-        <!--Collaborator View Controller-->
+        <!--Collaborators-->
         <scene sceneID="2X0-Cv-Yqk">
             <objects>
                 <viewController id="Puq-06-OAK" customClass="CollaboratorViewController" customModule="task_master" customModuleProvider="target" sceneMemberID="viewController">
@@ -213,9 +213,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-YL-snV">
-                                <rect key="frame" x="184" y="137" width="46" height="30"/>
+                                <rect key="frame" x="149" y="137" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Add Collaborator"/>
                                 <connections>
                                     <action selector="addButton:" destination="Puq-06-OAK" eventType="touchUpInside" id="O7l-Mq-EE9"/>
                                 </connections>
@@ -260,6 +260,10 @@
                                                     <rect key="frame" x="112" y="57" width="254" height="2"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </progressView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i9N-wz-VrU">
+                                                    <rect key="frame" x="319" y="0.0" width="55" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="374" height="116"/>
@@ -268,6 +272,7 @@
                                             <outlet property="collaboratorName" destination="zPc-Fi-Xnh" id="8yV-HU-uGD"/>
                                             <outlet property="collaboratorProgress" destination="sHu-wl-KIG" id="6RA-5p-HEv"/>
                                             <outlet property="collaboratorProgressNumber" destination="QBV-Yx-Dx9" id="fXu-yi-0Ej"/>
+                                            <outlet property="hostSign" destination="i9N-wz-VrU" id="0hp-kt-HAq"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -286,7 +291,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="z9D-ys-BzC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="awh-d2-yrU"/>
+                    <navigationItem key="navigationItem" title="Collaborators" id="awh-d2-yrU"/>
                     <connections>
                         <outlet property="addCollaborators" destination="QOh-dl-HSm" id="bOb-Fl-nyQ"/>
                         <outlet property="collaboratorsCV" destination="ofG-Q8-xwg" id="y3G-jc-3tg"/>

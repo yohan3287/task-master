@@ -94,10 +94,12 @@ class GoalDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
-    @IBAction func colaboratorButtonDidTab(_ sender: UIBarButtonItem) {
-        
+    @IBAction func collaboratorButtonDidTab(_ sender: Any) {
+        performSegue(withIdentifier: "toCollab", sender: self)
     }
     
+        
+ 
     /*
     // MARK: - Navigation
 

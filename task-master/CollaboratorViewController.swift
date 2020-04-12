@@ -18,10 +18,10 @@ class CollaboratorViewController: UIViewController,UICollectionViewDataSource,UI
     @IBOutlet weak var collaboratorsCV: UICollectionView!
     
     let progressMax:Float = 100
-    var collaboratorName: [String] = ["Rizqi", "Titan", "Marvin"]
-    var hostName: [String] = ["Bambang"]
-    var hostProgress: [Float] = [20]
-    var collaboratorProgress: [Float] = [20,20,20]
+    var collaboratorName: [String] = []
+    var hostName: [String] = ["Rizqi"]
+    var hostProgress: [Float] = [0]
+    var collaboratorProgress: [Float] = [0]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collaboratorName.count + 1
@@ -29,22 +29,25 @@ class CollaboratorViewController: UIViewController,UICollectionViewDataSource,UI
        
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collaboratorsCV.dequeueReusableCell(withReuseIdentifier: "collaboratorCell", for: indexPath) as! CollaboratorCell
-        if indexPath.row != 0 {
-            cell.collaboratorName.text = collaboratorName[indexPath.row-1]
-            cell.collaboratorProgress.setProgress(collaboratorProgress[indexPath.row-1], animated: false)
-            cell.collaboratorProgress.progress = collaboratorProgress[indexPath.row-1]/progressMax
-            cell.collaboratorProgress.transform.scaledBy(x: 0, y: 5)
-            cell.collaboratorProgressNumber.text = "\(collaboratorProgress[indexPath.row-1])%"
-                         return cell
-        } else{
+        if indexPath.row == 0 {
             cell.collaboratorName.text = hostName[indexPath.row]
-            cell.collaboratorProgress.setProgress(hostProgress[indexPath.row], animated: false)
-            cell.collaboratorProgress.progress = hostProgress[indexPath.row]/progressMax
-             cell.collaboratorProgress.transform.scaledBy(x: 0, y: 5)
-            cell.collaboratorProgressNumber.text = "\(hostProgress[indexPath.row])%"
+                      cell.hostSign.image = #imageLiteral(resourceName: "Host")
+                      cell.collaboratorProgress.setProgress(hostProgress[indexPath.row], animated: false)
+                      cell.collaboratorProgress.progress = hostProgress[indexPath.row]/progressMax
+                       cell.collaboratorProgress.transform.scaledBy(x: 0, y: 5)
+                      cell.collaboratorProgressNumber.text = "\(hostProgress[indexPath.row])%"
+                         return cell
+        } else {
+          cell.collaboratorName.text = collaboratorName[indexPath.row-1]
+                     cell.collaboratorProgress.setProgress(collaboratorProgress[indexPath.row-1], animated: false)
+                     cell.collaboratorProgress.progress = collaboratorProgress[indexPath.row-1]/progressMax
+                     cell.collaboratorProgress.transform.scaledBy(x: 0, y: 5)
+                     cell.collaboratorProgressNumber.text = "\(collaboratorProgress[indexPath.row-1])%"
             return cell
+            
+            
         }
-        
+
         
        }
     
@@ -52,6 +55,7 @@ class CollaboratorViewController: UIViewController,UICollectionViewDataSource,UI
     
     
     @IBAction func addButton(_ sender: Any) {
+        
         var newCollaborator: String = addCollaborators.text!
         let newCollaboratorProgress: Float = 0
         collaboratorName.append(newCollaborator)

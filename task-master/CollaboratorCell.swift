@@ -14,4 +14,5 @@ class CollaboratorCell: UICollectionViewCell {
     @IBOutlet weak var collaboratorName: UILabel!
     @IBOutlet weak var collaboratorProgress: UIProgressView!
     @IBOutlet weak var collaboratorProgressNumber: UILabel!
+    @IBOutlet weak var hostSign: UIImageView!
 }
