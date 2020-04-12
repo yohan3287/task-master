@@ -30,18 +30,15 @@ class ViewControllerArchives: UIViewController, UICollectionViewDelegate, UIColl
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     //
-            return dummyGoalsArchive.count+1
+            return dummyGoalsArchive.count
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = archivesCV.dequeueReusableCell(withReuseIdentifier: "archivesCell", for: indexPath) as! ArchivesCellCV
-    //        render goals
-            if indexPath.row != 0{
-                cell.backgroundColor = .green
-                cell.archivesGoallabel.text = dummyGoalsArchive[indexPath.row-1].namaGoals + "\nProgress Bar"
-                return cell
-            }
-             return cell
+            
+            cell.backgroundColor = .green
+            cell.archivesGoallabel.text = dummyGoalsArchive[indexPath.row].namaGoals + "\nProgress Bar"
+            return cell
         }
         override func viewDidLoad() {
             super.viewDidLoad()

@@ -28,11 +28,20 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         self.editButton.layer.cornerRadius = 20
         self.archiveButton.layer.cornerRadius = 20
-        var image: UIImage = UIImage(named: "Profile Blue")!
-        
-              bgImage = UIImageView(image: image)
-//              bgImage!.frame = CGRect(0,0,100,200)
-              self.view.addSubview(bgImage!)
+        var imageViewObject :UIImageView
+
+        imageViewObject = UIImageView(frame:CGRect(x: 50, y: 100, width: 300, height: 300))
+
+        imageViewObject.image = UIImage(named:"Profile Blue")
+
+        self.view.addSubview(imageViewObject)
+
+        self.view.sendSubviewToBack(imageViewObject)
+//        var image: UIImage = UIImage(named: "Profile Blue")!
+//        bgImage?.frame = CGRect(x: 100, y: 100, width: 100, height: 2500)
+//              bgImage = UIImageView(image: image)
+////              bgImage!.frame = CGRect(0,0,100,200)
+//              self.view.addSubview(bgImage!)
         userName.text = currentUser.userName
         print(currentUser.userName)
         // Do any additional setup after loading the view.
