@@ -17,16 +17,16 @@ class ViewControllerToDo: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return dummyGoals[section].namaGoals
+        return dummyGoals[section].goalName
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyGoals[section].missions.count
+        return dummyGoals[section].missionsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = toDoTableView.dequeueReusableCell(withIdentifier: "toDoCell", for: indexPath)
-        cell.textLabel?.text = dummyGoals[indexPath.section].missions[indexPath.row]
+        cell.textLabel?.text = dummyGoals[indexPath.section].missionsList[indexPath.row].missionName
         
         return cell
     }
