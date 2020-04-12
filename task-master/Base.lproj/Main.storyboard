@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Puq-06-OAK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -165,10 +165,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MissionsListCell" id="AL4-dh-lXa">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AL4-dh-lXa" id="acr-K7-VUf">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -187,7 +187,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.2.fill" catalog="system" id="0Il-X7-vBg">
                             <connections>
                                 <action selector="colaboratorButtonDidTab:" destination="Ech-Kj-lfg" id="oYY-e3-n9B"/>
-                                <segue destination="z9P-8v-Zbl" kind="show" id="DND-Ta-c1d"/>
+                                <segue destination="Puq-06-OAK" kind="show" id="wvj-Kb-Xij"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -204,63 +204,97 @@
             </objects>
             <point key="canvasLocation" x="2742.0289855072465" y="137.94642857142856"/>
         </scene>
-        <!--CollaboratorVC-->
-        <scene sceneID="aco-jp-HWZ">
+        <!--Collaborator View Controller-->
+        <scene sceneID="2X0-Cv-Yqk">
             <objects>
-                <collectionViewController id="z9P-8v-Zbl" customClass="CollaboratorVC" customModule="task_master" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="981-nb-BpH">
+                <viewController id="Puq-06-OAK" customClass="CollaboratorViewController" customModule="task_master" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PhX-HT-mCh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zg3-Lq-dmg">
-                            <size key="itemSize" width="414" height="105"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollaboratorCell" id="xQk-SK-IzS" customClass="CollaboratorCell" customModule="task_master" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-YL-snV">
+                                <rect key="frame" x="184" y="137" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HNz-j9-kox">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile Blue" translatesAutoresizingMaskIntoConstraints="NO" id="fr9-2F-KnX">
-                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="guW-1P-rmf">
-                                            <rect key="frame" x="112" y="72" width="274" height="2"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </progressView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Collaborator's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jC-o6-6Y2">
-                                            <rect key="frame" x="112" y="8" width="157" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="414" height="105"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <outlet property="collaboratorImage" destination="fr9-2F-KnX" id="X1F-Fy-k9j"/>
-                                    <outlet property="collaboratorName" destination="4jC-o6-6Y2" id="JzU-Ke-PGY"/>
-                                    <outlet property="collaboratorProgress" destination="guW-1P-rmf" id="JGJ-96-QJP"/>
+                                    <action selector="addButton:" destination="Puq-06-OAK" eventType="touchUpInside" id="O7l-Mq-EE9"/>
                                 </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="z9P-8v-Zbl" id="W3G-xD-ukb"/>
-                            <outlet property="delegate" destination="z9P-8v-Zbl" id="HmW-MR-JRs"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="WqE-VJ-wrE"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lMj-lr-8GG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ofG-Q8-xwg">
+                                <rect key="frame" x="20" y="175" width="374" height="687"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K6c-Qy-GTi">
+                                    <size key="itemSize" width="374" height="116"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collaboratorCell" id="tra-VO-w1l" customClass="CollaboratorCell" customModule="task_master" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="116"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BhD-gO-uOr" customClass="CollaboratorCell" customModule="task_master" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="116"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile Blue" translatesAutoresizingMaskIntoConstraints="NO" id="BNw-c1-e9C">
+                                                    <rect key="frame" x="8" y="8" width="85" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Collaborator's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPc-Fi-Xnh">
+                                                    <rect key="frame" x="125" y="20" width="157" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBV-Yx-Dx9">
+                                                    <rect key="frame" x="218" y="79" width="60" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sHu-wl-KIG">
+                                                    <rect key="frame" x="112" y="57" width="254" height="2"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </progressView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="374" height="116"/>
+                                        <connections>
+                                            <outlet property="collaboratorImage" destination="BNw-c1-e9C" id="p2n-uv-eUT"/>
+                                            <outlet property="collaboratorName" destination="zPc-Fi-Xnh" id="8yV-HU-uGD"/>
+                                            <outlet property="collaboratorProgress" destination="sHu-wl-KIG" id="6RA-5p-HEv"/>
+                                            <outlet property="collaboratorProgressNumber" destination="QBV-Yx-Dx9" id="fXu-yi-0Ej"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Puq-06-OAK" id="9HD-Vz-P1I"/>
+                                    <outlet property="delegate" destination="Puq-06-OAK" id="5LB-6v-XHG"/>
+                                </connections>
+                            </collectionView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOh-dl-HSm">
+                                <rect key="frame" x="20" y="95" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="z9D-ys-BzC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="awh-d2-yrU"/>
+                    <connections>
+                        <outlet property="addCollaborators" destination="QOh-dl-HSm" id="bOb-Fl-nyQ"/>
+                        <outlet property="collaboratorsCV" destination="ofG-Q8-xwg" id="y3G-jc-3tg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Keg-kX-vaw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3640.579710144928" y="143.97321428571428"/>
+            <point key="canvasLocation" x="3666.666666666667" y="142.63392857142856"/>
         </scene>
         <!--Edit ProfileVC-->
         <scene sceneID="jJU-V2-uVZ">
@@ -395,10 +429,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MissionsListCell" id="EoE-uB-6fj">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EoE-uB-6fj" id="tsg-cB-VbT">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -463,10 +497,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="toDoCell" id="ZHc-MQ-fQu">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZHc-MQ-fQu" id="H0V-DO-0zb">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -651,11 +685,11 @@
     </scenes>
     <resources>
         <image name="Profile Blue" width="209" height="224"/>
-        <image name="checkmark.square.fill" catalog="system" width="64" height="56"/>
-        <image name="list.bullet" catalog="system" width="64" height="44"/>
-        <image name="person.2.fill" catalog="system" width="64" height="40"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
-        <image name="rectangle.grid.1x2.fill" catalog="system" width="64" height="50"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="rectangle.grid.1x2.fill" catalog="system" width="128" height="101"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>
