@@ -22,8 +22,6 @@ struct goalArchive {
        goalArchive(namaGoals: "Punya Pacar",
             missions: ["buka tinder","jadi ganteng / cantik","jadi tajir"])
    ]
-   // dummy motivation message
-//   let dummyMotivation = ["xcbxcxvxcvxcbxvxc","rtyrtyrtytryrty","fghfghhgfhfghgff","qweqwewqeqew","asdasdsadsadsa"]
 
 class ViewControllerArchives: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -31,8 +29,8 @@ class ViewControllerArchives: UIViewController, UICollectionViewDelegate, UIColl
         @IBOutlet weak var archivesCV: UICollectionView!
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    //        ditambah 1 untuk motivation message
-            return dummyGoalsArchive.count + 1
+    //
+            return dummyGoalsArchive.count+1
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -42,12 +40,8 @@ class ViewControllerArchives: UIViewController, UICollectionViewDelegate, UIColl
                 cell.backgroundColor = .green
                 cell.archivesGoallabel.text = dummyGoalsArchive[indexPath.row-1].namaGoals + "\nProgress Bar"
                 return cell
-            }else {
-    //            initiate motivation message
-//                cell.backgroundColor = .red
-//                cell.labelGoals.text = "MOTIVATION MESSAGE : \n" + dummyMotivation[indexPath.row]
-                return cell
             }
+             return cell
         }
         override func viewDidLoad() {
             super.viewDidLoad()
