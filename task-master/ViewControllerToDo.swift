@@ -13,30 +13,31 @@ class ViewControllerToDo: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dummyGoals.count
+        return goalsList.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return dummyGoals[section].goalName
+        return goalsList[section].goalName
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyGoals[section].missionsList.count
+        return goalsList[section].missionsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = toDoTableView.dequeueReusableCell(withIdentifier: "toDoCell", for: indexPath) as! toDoTableViewCell
-        cell.textLabel?.text = dummyGoals[indexPath.section].missionsList[indexPath.row].missionName
-        cell.checkedView.isHidden = dummyGoals[indexPath.section].missionsList[indexPath.row].missionIsCompleted
+        cell.textLabel?.text = goalsList[indexPath.section].missionsList[indexPath.row].missionName
+        cell.checkedView.isHidden = goalsList[indexPath.section].missionsList[indexPath.row].missionIsCompleted
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if dummyGoals[indexPath.section].missionsList[indexPath.row].missionIsCompleted == true{
-            dummyGoals[indexPath.section].missionsList[indexPath.row].missionIsCompleted = false
+        if goalsList[indexPath.section].missionsList[indexPath.row].missionIsCompleted == true{
+            goalsList[indexPath.section].missionsList[indexPath.row].missionIsCompleted = false
         } else {
-            dummyGoals[indexPath.section].missionsList[indexPath.row].missionIsCompleted = true
+            goalsList[indexPath.section].missionsList[indexPath.row].missionIsCompleted = true
         }
+//        goalsList[indexPath.section].goalProgressPercentage = countGoalProgressPercentageForGoalIndex(indexPath.section)
         self.toDoTableView.reloadData()
     }
 

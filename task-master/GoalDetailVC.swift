@@ -9,7 +9,7 @@
 
 import UIKit
 
-var goalTemp: goal = goal(goalName: "", goalTimeStart: "", goalTimeEnd: "", missionsList: [], colaboratorsList: [])
+var goalTemp: goal = goal(goalName: "", goalProgressPercentage: 0, goalTimeStart: "", goalTimeEnd: "", missionsList: [], colaboratorsList: [])
 var goalDetailVCIsForDetailIndex: Int = -1
 
 class GoalDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -48,11 +48,11 @@ class GoalDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         if goalDetailVCIsForDetailIndex >= 0 {
             self.navigationItem.title = "Goal Detail"
-            goalTemp = dummyGoals[goalDetailVCIsForDetailIndex]
+            goalTemp = goalsList[goalDetailVCIsForDetailIndex]
         }
         else{
             self.navigationItem.title = "Add Goal"
-            goalTemp = goal(goalName: "", goalTimeStart: "", goalTimeEnd: "", missionsList: [], colaboratorsList: [])
+            goalTemp = goal(goalName: "", goalProgressPercentage: 0, goalTimeStart: "", goalTimeEnd: "", missionsList: [], colaboratorsList: [])
         }
         
         goalNameTextField.text = goalTemp.goalName
@@ -153,10 +153,10 @@ class GoalDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
         
         if goalDetailVCIsForDetailIndex >= 0 {
-            dummyGoals[goalDetailVCIsForDetailIndex] = goalTemp
+            goalsList[goalDetailVCIsForDetailIndex] = goalTemp
         }
         else{
-            dummyGoals.append(goalTemp)
+            goalsList.append(goalTemp)
         }
         
         performSegue(withIdentifier: "unwindToGoals", sender: self)

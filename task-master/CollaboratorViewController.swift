@@ -30,14 +30,17 @@ class CollaboratorViewController: UIViewController,UICollectionViewDataSource,UI
         
         if indexPath.row == 0{
             cell.collaboratorName.text = currentUser.userName
-            
+            cell.collaboratorProgress.setProgress(goalTemp.goalProgressPercentage, animated: false)
+            cell.collaboratorProgress.progress = goalTemp.goalProgressPercentage / 100
+            cell.collaboratorProgress.transform.scaledBy(x: 0, y: 5)
+            cell.collaboratorProgressNumber.text = "\(goalTemp.goalProgressPercentage) %"
 
         } else{
-            cell.collaboratorName.text = goalTemp.colaboratorsList[indexPath.row+1].collaboratorName
-            cell.collaboratorProgress.setProgress(goalTemp.colaboratorsList[indexPath.row+1].collaboratorProgress, animated: false)
-            cell.collaboratorProgress.progress = goalTemp.colaboratorsList[indexPath.row+1].collaboratorProgress/progressMax
+            cell.collaboratorName.text = goalTemp.colaboratorsList[indexPath.row-1].collaboratorName
+            cell.collaboratorProgress.setProgress(goalTemp.colaboratorsList[indexPath.row-1].collaboratorProgressPercentage, animated: false)
+            cell.collaboratorProgress.progress =  goalTemp.colaboratorsList[indexPath.row-1].collaboratorProgressPercentage / 100
             cell.collaboratorProgress.transform.scaledBy(x: 0, y: 5)
-            cell.collaboratorProgressNumber.text = "\(goalTemp.colaboratorsList[indexPath.row+1].collaboratorProgress)"
+            cell.collaboratorProgressNumber.text = "\(goalTemp.colaboratorsList[indexPath.row-1].collaboratorProgressPercentage) %"
             
         }
     
@@ -73,7 +76,7 @@ class CollaboratorViewController: UIViewController,UICollectionViewDataSource,UI
         
         var newCollaborator: String = addCollaborators.text!
         //let newCollaboratorProgress: Float = 0
-        goalTemp.colaboratorsList.append(collaborator(collaboratorName: newCollaborator, collaboratorProgress: 0))
+        goalTemp.colaboratorsList.append(collaborator(collaboratorName: newCollaborator, collaboratorProgressPercentage: 0))
         //collaboratorProgress.append(newCollaboratorProgress)
         collaboratorsCV.reloadData()
     }
