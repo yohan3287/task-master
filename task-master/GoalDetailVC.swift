@@ -53,6 +53,10 @@ class GoalDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             self.navigationItem.title = "Add Goal"
         }
         
+        goalNameTextField.text = goalTemp.goalName
+        goalTimeStartTextField.text = goalTemp.goalTimeStart
+        goalTimeEndTextField.text = goalTemp.goalTimeEnd
+        
         self.missionsListTableView.isEditing = !self.missionsListTableView.isEditing
         self.missionsListTableView.allowsSelectionDuringEditing = true
         

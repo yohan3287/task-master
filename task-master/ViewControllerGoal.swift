@@ -72,6 +72,11 @@ class ViewControllerGoal: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        goalDetailVCIsForDetailIndex = indexPath.row - 1
+        performSegue(withIdentifier: "toGoalDetail", sender: self)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
