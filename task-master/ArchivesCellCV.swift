@@ -9,5 +9,6 @@
 import UIKit
 
 class ArchivesCellCV: UICollectionViewCell {
-     @IBOutlet weak var archivesGoallabel: UILabel!
+    @IBOutlet weak var goalCompletedImage: UIImageView!
+    @IBOutlet weak var archivesGoallabel: UILabel!
 }

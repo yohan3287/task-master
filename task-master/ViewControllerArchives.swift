@@ -34,9 +34,11 @@ class ViewControllerArchives: UIViewController, UICollectionViewDelegate, UIColl
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = archivesCV.dequeueReusableCell(withReuseIdentifier: "archivesCell", for: indexPath) as! ArchivesCellCV
             
-            cell.backgroundColor = .green
+            let cell = archivesCV.dequeueReusableCell(withReuseIdentifier: "archivesCell", for: indexPath) as! ArchivesCellCV
+            //get pgoal progress data from goals view
+            //mission.init(missionName: "", missionIsCompleted: 1)
+            cell.goalCompletedImage.image = #imageLiteral(resourceName: "Archives Button")
             cell.archivesGoallabel.text = dummyGoalsArchive[indexPath.row].namaGoals + "\nProgress Bar"
             return cell
         }
