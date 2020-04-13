@@ -88,6 +88,8 @@ class ViewControllerGoal: UIViewController, UICollectionViewDelegate, UICollecti
         performSegue(withIdentifier: "toGoalDetail", sender: self)
     }
     
-    @IBAction func unwindToGoals(unwindSegue: UIStoryboardSegue){}
+    @IBAction func unwindToGoals(unwindSegue: UIStoryboardSegue){
+        self.goalsCV.reloadData()
+    }
     
 }

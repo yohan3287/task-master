@@ -195,7 +195,6 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButton:" destination="Ech-Kj-lfg" eventType="touchUpInside" id="RdB-Ne-2Ue"/>
-                                    <segue destination="eda-dw-3Yp" kind="unwind" unwindAction="unwindToGoalsWithUnwindSegue:" id="iZo-U5-03T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -217,6 +216,7 @@
                         <outlet property="goalTimeStartTextField" destination="uYZ-hP-ZSS" id="r9I-Fn-DyX"/>
                         <outlet property="missionsListTableView" destination="PaF-0v-wio" id="blL-Ry-VZw"/>
                         <outlet property="titleVC" destination="NrH-D5-Sqi" id="qfm-fq-Ek7"/>
+                        <segue destination="eda-dw-3Yp" kind="unwind" identifier="unwindToGoals" unwindAction="unwindToGoalsWithUnwindSegue:" id="qiz-k2-rto"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTe-dg-25X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
