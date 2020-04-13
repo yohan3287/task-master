@@ -9,7 +9,7 @@
 
 import UIKit
 
-var goalTemp: goalTmp = goalTmp(goalName: "", goalTimeStart: "", goalTimeEnd: "", missionsList: [], colaboratorsList: [])
+var goalTemp: goal = goal(goalName: "", goalTimeStart: "", goalTimeEnd: "", missionsList: [], colaboratorsList: [])
 var goalDetailVCIsForDetailIndex: Int = -1
 
 class GoalDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -52,7 +52,7 @@ class GoalDetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
         else{
             self.navigationItem.title = "Add Goal"
-            goalTemp = goalTmp(goalName: "", goalTimeStart: "", goalTimeEnd: "", missionsList: [], colaboratorsList: [])
+            goalTemp = goal(goalName: "", goalTimeStart: "", goalTimeEnd: "", missionsList: [], colaboratorsList: [])
         }
         
         goalNameTextField.text = goalTemp.goalName

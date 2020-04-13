@@ -87,11 +87,12 @@
 				AE91EBCF243DBC9B0003C3D0 /* AppDelegate.swift */,
 				AE91EBD1243DBC9B0003C3D0 /* SceneDelegate.swift */,
 				AE91EBD3243DBC9B0003C3D0 /* ViewControllerGoal.swift */,
+				AE84B249243F1C5200E026E8 /* GoalDetailVC.swift */,
+				F5E6E5F3243E4ACC00D8A6B6 /* ViewControllerToDo.swift */,
 				2DFB809A243F264D007B79DF /* ViewControllerArchives.swift */,
 				AE91EBD5243DBC9B0003C3D0 /* Main.storyboard */,
 				9FCC9F76244301DB009FFC13 /* CollaboratorViewController.swift */,
 				2DFB8098243F255C007B79DF /* DecorateCV.swift */,
-				AE84B249243F1C5200E026E8 /* GoalDetailVC.swift */,
 				2D38B5742441B6F400D9F248 /* AddGoalsVC.swift */,
 				EAD16DFB243F065800B7470D /* ProfileVC.swift */,
 				EAD16DF9243EF9C600B7470D /* EditProfileVC.swift */,
@@ -100,7 +101,6 @@
 				AE91EBDD243DBC9C0003C3D0 /* Info.plist */,
 				AE10188B2440F97700DA8319 /* UITextField+InputView.swift */,
 				9FCC9F782443031B009FFC13 /* CollaboratorCell.swift */,
-				F5E6E5F3243E4ACC00D8A6B6 /* ViewControllerToDo.swift */,
 				F51E7B8324445C0300086CA5 /* toDoTableViewCell.swift */,
 			);
 			path = "task-master";

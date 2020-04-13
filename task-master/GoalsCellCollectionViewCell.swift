@@ -10,6 +10,7 @@ import UIKit
 
 class GoalsCellCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var progressBarGoal: UIProgressView!
     @IBOutlet weak var imageViewGoal: UIImageView!
     @IBOutlet weak var labelGoals: UILabel!
 }

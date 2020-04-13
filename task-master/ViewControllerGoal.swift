@@ -17,7 +17,7 @@ struct collaborator {
     var collaboratorProgress: Float
 }
 //dummy data to render --- struct and class
-struct goalTmp {// konflik nama goal
+struct goal {// konflik nama goal
     var goalName: String
     var goalTimeStart: String
     var goalTimeEnd: String
@@ -28,7 +28,7 @@ struct goalTmp {// konflik nama goal
 // define dummy goals to render
 
 var dummyGoals = [
-    goalTmp(goalName: "berat badan turun 10Kg", // dummy data
+    goal(goalName: "berat badan turun 10Kg", // dummy data
     goalTimeStart: "1 Jan 2020",
     goalTimeEnd: "1 Dec 2020",
     missionsList: [
@@ -37,7 +37,7 @@ var dummyGoals = [
     colaboratorsList: [
        collaborator(collaboratorName: "Anton", collaboratorProgress: 20),
        collaborator(collaboratorName: "Marvin", collaboratorProgress: 70)]),
-    goalTmp(goalName: "World class developer", // dummy data
+    goal(goalName: "World class developer", // dummy data
     goalTimeStart: "11 Feb 2020",
     goalTimeEnd: "11 Oct 2021",
     missionsList: [
@@ -47,6 +47,7 @@ var dummyGoals = [
        collaborator(collaboratorName: "Yohan", collaboratorProgress: 0),
        collaborator(collaboratorName: "Titan", collaboratorProgress: 100)])
 ]
+
 // dummy motivation message
 let dummyMotivation = ["Do or do not, there is no try!","Hate leads to anger, anger leads to suffering","fghfghhgfhfghgff","qweqwewqeqew","asdasdsadsadsa"]
 
@@ -63,12 +64,31 @@ class ViewControllerGoal: UIViewController, UICollectionViewDelegate, UICollecti
 //        render goals
         if indexPath.row != 0{
             cell.imageViewGoal.image = #imageLiteral(resourceName: "Motivation Button")
-            cell.labelGoals.text = dummyGoals[indexPath.row-1].goalName + "\nProgress Bar"
+            var progressCount : Float = 0.0
+            //count progress
+            for missionProgress in dummyGoals[indexPath.row-1].missionsList {
+                if missionProgress.missionIsCompleted == true {
+                    progressCount += 1
+                }
+            }
+            //progress percentage
+            let progressPercetage = progressCount / Float(dummyGoals[indexPath.row-1].missionsList.count)
+            
+            if progressCount/Float(dummyGoals[indexPath.row-1].missionsList.count) == 1.0 {
+                cell.labelGoals.text = dummyGoals[indexPath.row-1].goalName + "\nCompleted !"
+                cell.progressBarGoal.isHidden = true
+            } else {
+                cell.progressBarGoal.isHidden = false
+                cell.labelGoals.text = dummyGoals[indexPath.row-1].goalName + "\n\(Int(progressPercetage*100)) %"
+                cell.progressBarGoal.progress = progressCount/Float(dummyGoals[indexPath.row-1].missionsList.count)
+            }
+            
             return cell
         }else {
 //            initiate motivation message
             cell.imageViewGoal.image = #imageLiteral(resourceName: "Goals Button")
             cell.labelGoals.text = "MOTIVATION MESSAGE : \n" + dummyMotivation[indexPath.row]
+            cell.progressBarGoal.isHidden = true
             return cell
         }
     }
@@ -82,7 +102,12 @@ class ViewControllerGoal: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.goalsCV.reloadData()
+    }
+    
     override func viewDidLoad() {
+        self.goalsCV.reloadData()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -90,6 +115,7 @@ class ViewControllerGoal: UIViewController, UICollectionViewDelegate, UICollecti
     @IBAction func addGoalDidTab(_ sender: UIBarButtonItem) {
         goalDetailVCIsForDetailIndex = -1
         performSegue(withIdentifier: "toGoalDetail", sender: self)
+        self.goalsCV.reloadData()
     }
     
     @IBAction func unwindToGoals(unwindSegue: UIStoryboardSegue){
