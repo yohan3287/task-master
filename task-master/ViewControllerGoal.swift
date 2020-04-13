@@ -61,22 +61,25 @@ class ViewControllerGoal: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = goalsCV.dequeueReusableCell(withReuseIdentifier: "goalsCell", for: indexPath) as! GoalsCellCollectionViewCell
 //        render goals
         if indexPath.row != 0{
-            cell.backgroundColor = .blue
+            cell.imageViewGoal.image = #imageLiteral(resourceName: "Motivation Button")
             cell.labelGoals.text = dummyGoals[indexPath.row-1].goalName + "\nProgress Bar"
             return cell
         }else {
 //            initiate motivation message
-            cell.backgroundColor = .red
+            cell.imageViewGoal.image = #imageLiteral(resourceName: "Goals Button")
             cell.labelGoals.text = "MOTIVATION MESSAGE : \n" + dummyMotivation[indexPath.row]
             return cell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        goalDetailVCIsForDetailIndex = indexPath.row - 1
-        performSegue(withIdentifier: "toGoalDetail", sender: self)
+        if indexPath.row == 0 {
+            return
+        }else{
+            goalDetailVCIsForDetailIndex = indexPath.row - 1
+            performSegue(withIdentifier: "toGoalDetail", sender: self)
+        }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

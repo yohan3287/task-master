@@ -10,5 +10,6 @@ import UIKit
 
 class GoalsCellCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageViewGoal: UIImageView!
     @IBOutlet weak var labelGoals: UILabel!
 }

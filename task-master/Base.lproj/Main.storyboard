@@ -33,7 +33,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="goalsCell" id="Cof-rA-HAp" customClass="GoalsCellCollectionViewCell" customModule="task_master" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="goalsCell" id="Cof-rA-HAp" customClass="GoalsCellCollectionViewCell" customModule="task_master" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="138"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -55,6 +55,7 @@
                                         </view>
                                         <size key="customSize" width="374" height="138"/>
                                         <connections>
+                                            <outlet property="imageViewGoal" destination="XJ7-V8-uof" id="pQg-t2-mS8"/>
                                             <outlet property="labelGoals" destination="mCY-3P-UWQ" id="7Oq-RD-2DV"/>
                                         </connections>
                                     </collectionViewCell>
@@ -319,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Keg-kX-vaw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3666.666666666667" y="142.63392857142856"/>
+            <point key="canvasLocation" x="3649" y="138"/>
         </scene>
         <!--Edit ProfileVC-->
         <scene sceneID="jJU-V2-uVZ">
