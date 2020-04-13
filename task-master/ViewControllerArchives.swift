@@ -11,7 +11,6 @@ import UIKit
 struct goalArchive {
        var namaGoals: String
        var missions: [String]
-   //    add goal property here ! ( if needed ! )
    }
    // define dummy goals to render
    let dummyGoalsArchive = [
