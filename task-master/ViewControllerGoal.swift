@@ -26,6 +26,7 @@ struct goalTmp {// konflik nama goal
 }
 
 // define dummy goals to render
+
 var dummyGoals = [
     goalTmp(goalName: "berat badan turun 10Kg", // dummy data
     goalTimeStart: "1 Jan 2020",

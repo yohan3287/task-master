@@ -8,30 +8,42 @@
 
 import UIKit
 
+var currentUserProgress = 0
 class CollaboratorViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
     @IBOutlet weak var addCollaborators: UITextField!
     @IBOutlet weak var collaboratorsCV: UICollectionView!
     
-    let progressMax:Float = 100
+    let progressMax:Float = Float(goalTemp.missionsList.count)
     //var collaboratorName: [String] = []
     var hostName: [String] = ["Rizqi"]
     var hostProgress: [Float] = [0]
     var collaboratorProgress: [Float] = [0]
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return goalTemp.colaboratorsList.count
+        return goalTemp.colaboratorsList.count+1
        }
        
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collaboratorsCV.dequeueReusableCell(withReuseIdentifier: "collaboratorCell", for: indexPath) as! CollaboratorCell
-        cell.collaboratorName.text = goalTemp.colaboratorsList[indexPath.row].collaboratorName
-        cell.collaboratorProgress.setProgress(goalTemp.colaboratorsList[indexPath.row].collaboratorProgress, animated: false)
-        cell.collaboratorProgress.progress = goalTemp.colaboratorsList[indexPath.row].collaboratorProgress/progressMax
-        cell.collaboratorProgress.transform.scaledBy(x: 0, y: 5)
-        cell.collaboratorProgressNumber.text = "\(goalTemp.colaboratorsList[indexPath.row].collaboratorProgress)"
         
+        if indexPath.row == 0{
+            cell.collaboratorName.text = currentUser.userName
+            
+
+        } else{
+            cell.collaboratorName.text = goalTemp.colaboratorsList[indexPath.row+1].collaboratorName
+            cell.collaboratorProgress.setProgress(goalTemp.colaboratorsList[indexPath.row+1].collaboratorProgress, animated: false)
+            cell.collaboratorProgress.progress = goalTemp.colaboratorsList[indexPath.row+1].collaboratorProgress/progressMax
+            cell.collaboratorProgress.transform.scaledBy(x: 0, y: 5)
+            cell.collaboratorProgressNumber.text = "\(goalTemp.colaboratorsList[indexPath.row+1].collaboratorProgress)"
+            
+        }
+    
         return cell
+        
+        
 //        if indexPath.row == 0 {
 //            cell.collaboratorName.text = hostName[indexPath.row]
 //                      cell.hostSign.image = #imageLiteral(resourceName: "Host")
