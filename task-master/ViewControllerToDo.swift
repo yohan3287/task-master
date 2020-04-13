@@ -25,20 +25,24 @@ class ViewControllerToDo: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = toDoTableView.dequeueReusableCell(withIdentifier: "toDoCell", for: indexPath)
+        let cell = toDoTableView.dequeueReusableCell(withIdentifier: "toDoCell", for: indexPath) as! toDoTableViewCell
         cell.textLabel?.text = dummyGoals[indexPath.section].missionsList[indexPath.row].missionName
-        
+        cell.checkedView.isHidden = dummyGoals[indexPath.section].missionsList[indexPath.row].missionIsCompleted
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if dummyGoals[indexPath.section].missionsList[indexPath.row].missionIsCompleted == true{
+            dummyGoals[indexPath.section].missionsList[indexPath.row].missionIsCompleted = false
+        } else {
+            dummyGoals[indexPath.section].missionsList[indexPath.row].missionIsCompleted = true
+        }
+        self.toDoTableView.reloadData()
     }
-    
-    
-    
 
     override func viewDidLoad() {
+        self.toDoTableView.delegate = self
+        self.toDoTableView.dataSource = self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
