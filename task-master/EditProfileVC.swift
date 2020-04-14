@@ -29,6 +29,22 @@ class EditProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var labelview :UILabel
+               var imageViewObject :UIImageView
+              
+                     imageViewObject = UIImageView(frame:CGRect(x: 50, y: 100, width: 300, height: 300))
+                  
+                     imageViewObject.image = UIImage(named:"Profile Blue")
+               let label = UILabel(frame: CGRect(x: 50, y: 1000, width: 300, height: 21))
+                      label.center = CGPoint(x: 200, y: 380)
+                      label.textAlignment = .center
+                      label.text = "Change profile picture"
+                      label.textColor = .systemBlue
+                      self.view.addSubview(label)
+                     self.view.addSubview(imageViewObject)
+
+                     self.view.sendSubviewToBack(imageViewObject)
+                       
         NameField.delegate = self
         GenderField.delegate = self
         ageField.delegate = self
